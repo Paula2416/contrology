@@ -87,3 +87,540 @@ nav ul li a.hover:hover::after {
     width: 100%;
     color: black;
 }
+
+/* hero section  */
+.hero {
+    color: rgb(254, 251, 254);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.home-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(171, 112, 222, 0.963), rgba(161, 105, 159, 0.5));
+    z-index: 1;
+    opacity: 100%;
+    filter: blur(30px);
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero span {
+    color: #e321ed;
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0c0101;
+}
+
+.about {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* responsive for header and hero  */
+@media screen and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li {
+        margin-left: 50px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containers {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .logo h1 {
+        padding: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+}
+
+
+/* sevices */
+.services-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em;
+    top: 30%;
+    margin-bottom: 30px;
+    color: #f30ddc;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    flex: 1;
+    padding: 30px;
+}
+
+.service-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.service-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.service-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.service-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+/* Large Screens */
+@media screen and (min-width: 992px) {
+    .service-item:nth-child(even) .service-image {
+        order: -1;
+    }
+
+    .service-item {
+        justify-content: space-between;
+    }
+}
+
+/* Small Screens */
+@media screen and (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-image img {
+        transform: scale(1);
+    }
+
+    .service-image img:hover {
+        transform: scale(1.1); 
+    }
+}
+/* pricing section */
+/* Base Styles */
+.pricing-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping on small screens */
+    gap: 20px;  /* Adds space between items */
+}
+
+.pricing-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;  /* Allows items to grow/shrink equally */
+    min-width: 250px;  /* Minimum width for small screens */
+    transition: transform 0.3s ease;  /* Animation for hover effect */
+}
+
+.pricing-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pricing-item p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #666;
+}
+
+.pricing-item span {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;  /* Center items on small screens */
+    }
+
+    .pricing-item {
+        width: 100%;  /* Make each pricing item take full width */
+        max-width: 400px;  /* Set a max width for better presentation */
+        margin-bottom: 20px;  /* Add space between items */
+    }
+}
+
+@media (min-width: 769px) {
+    .pricing-item {
+        max-width: 30%;  /* Make the items take up roughly 30% of the container width */
+    }
+}
+
+/* pricing info anf the footer  */
+/* Base Styles */
+.pricing-info {
+    position: relative;
+    margin-top: 90px;
+    background: rgba(41, 34, 41, 0.954);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 5px rgba(244, 2, 232, 0.911);
+    z-index: 2;
+    text-align: center;
+}
+
+.pricing-info h2 p {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(250, 7, 250);
+}
+
+.pricing-info form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pricing-info input[type="text"],
+.pricing-info input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    border-color: rgb(155, 74, 155);
+    background-color: rgb(33, 26, 33);
+}
+
+.pricing-info button {
+    background-color: rgb(7, 6, 6);
+    color: rgb(253, 8, 253);
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-info button:hover {
+    background-color: rgb(0, 217, 255);
+}
+
+
+/* sevices */
+.services-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em;
+    top: 30%;
+    margin-bottom: 30px;
+    color: #f30ddc;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    flex: 1;
+    padding: 30px;
+}
+
+.service-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.service-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.service-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.service-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+/* Large Screens */
+@media screen and (min-width: 992px) {
+    .service-item:nth-child(even) .service-image {
+        order: -1;
+    }
+
+    .service-item {
+        justify-content: space-between;
+    }
+}
+
+/* Small Screens */
+@media screen and (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-image img {
+        transform: scale(1);
+    }
+
+    .service-image img:hover {
+        transform: scale(1.1); 
+    }
+}
+/* pricing section */
+/* Base Styles */
+.pricing-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping on small screens */
+    gap: 20px;  /* Adds space between items */
+}
+
+.pricing-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;  /* Allows items to grow/shrink equally */
+    min-width: 250px;  /* Minimum width for small screens */
+    transition: transform 0.3s ease;  /* Animation for hover effect */
+}
+
+.pricing-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pricing-item p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #666;
+}
+
+.pricing-item span {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;  /* Center items on small screens */
+    }
+
+    .pricing-item {
+        width: 100%;  /* Make each pricing item take full width */
+        max-width: 400px;  /* Set a max width for better presentation */
+        margin-bottom: 20px;  /* Add space between items */
+    }
+}
+
+@media (min-width: 769px) {
+    .pricing-item {
+        max-width: 30%;  /* Make the items take up roughly 30% of the container width */
+    }
+}
+
+/* pricing info anf the footer  */
+/* Base Styles */
+.pricing-info {
+    position: relative;
+    margin-top: 90px;
+    background: rgba(41, 34, 41, 0.954);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 5px rgba(244, 2, 232, 0.911);
+    z-index: 2;
+    text-align: center;
+}
+
+.pricing-info h2 p {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(250, 7, 250);
+}
+
+.pricing-info form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pricing-info input[type="text"],
+.pricing-info input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    border-color: rgb(155, 74, 155);
+    background-color: rgb(33, 26, 33);
+}
+
+.pricing-info button {
+    background-color: rgb(7, 6, 6);
+    color: rgb(253, 8, 253);
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-info button:hover {
+    background-color: rgb(0, 217, 255);
+}
