@@ -10,7 +10,7 @@ body {
 
 /* header */
 .main-image {
-    background: url(../images/main.jpg) center/cover no-repeat;
+    background: url(/assets/images/main.jpg) center/cover no-repeat;
     background-size: cover;
     background-position: center;
     color: rgb(255, 6, 255);
@@ -48,4 +48,42 @@ body {
     font-size: 1em;
     font-weight: bold;
     color: rgb(248, 15, 248);
+}
+/* navigation bar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    margin-left: 80px;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: rgb(253, 12, 253);
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.5s;
+}
+
+nav ul li a.hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #11110e;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 10;
+}
+
+nav ul li a.hover:hover::after {
+    width: 100%;
+    color: black;
 }
