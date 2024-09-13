@@ -13,7 +13,7 @@ body {
     background: url(/assets/images/main.jpg) center/cover no-repeat;
     background-size: cover;
     background-position: center;
-    color: rgb(255, 6, 255);
+    color: rgb(214, 158, 214);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,6 @@ body {
     text-align: center;
     padding: 0 20px;
 }
-
 .containers {
     display: flex;
     justify-content: space-between;
@@ -40,14 +39,14 @@ body {
 .logo h1 {
     font-size: 2.5em;
     font-weight: bold;
-    color: rgb(18, 10, 10);
+    color: rgb(252, 6, 252);
     margin: 3;
 }
 
 .logo span {
     font-size: 1em;
     font-weight: bold;
-    color: rgb(248, 15, 248);
+    color: rgb(163, 8, 246);
 }
 /* navigation bar */
 nav ul {
@@ -64,9 +63,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(253, 12, 253);
+    color: rgb(7, 44, 253);
+    font-size: bold;
+    font-weight: 100px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: relative;
     transition: color 0.5s;
 }
@@ -215,10 +216,10 @@ nav ul li a.hover:hover::after {
     }
 }
 
-
 /* sevices */
 .services-section {
     padding: 50px 20px;
+    text-align: center;
     background-color: #f9f9f9;
 }
 
@@ -298,8 +299,8 @@ h2 {
         transform: scale(1.1); 
     }
 }
+
 /* pricing section */
-/* Base Styles */
 .pricing-section {
     padding: 50px 20px;
     background-color: #f5f5f5;
@@ -310,8 +311,8 @@ h2 {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    flex-wrap: wrap;  /* Allows wrapping on small screens */
-    gap: 20px;  /* Adds space between items */
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .pricing-item {
@@ -321,9 +322,9 @@ h2 {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;  /* Allows items to grow/shrink equally */
-    min-width: 250px;  /* Minimum width for small screens */
-    transition: transform 0.3s ease;  /* Animation for hover effect */
+    flex: 1; 
+    min-width: 250px; 
+    transition: transform 0.3s ease; 
 }
 
 .pricing-item h4 {
@@ -344,236 +345,30 @@ h2 {
 }
 
 .pricing-item:hover {
-    transform: scale(1.05);  /* Slight zoom effect on hover */
+    transform: scale(1.05); 
 }
 
 /* Responsive Layouts */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;  /* Center items on small screens */
+        align-items: center; 
     }
 
     .pricing-item {
-        width: 100%;  /* Make each pricing item take full width */
-        max-width: 400px;  /* Set a max width for better presentation */
-        margin-bottom: 20px;  /* Add space between items */
+        width: 100%;  
+        max-width: 400px;  
+        margin-bottom: 20px; 
     }
 }
 
 @media (min-width: 769px) {
     .pricing-item {
-        max-width: 30%;  /* Make the items take up roughly 30% of the container width */
+        max-width: 30%;  
     }
 }
 
-/* pricing info anf the footer  */
-/* Base Styles */
-.pricing-info {
-    position: relative;
-    margin-top: 90px;
-    background: rgba(41, 34, 41, 0.954);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 5px rgba(244, 2, 232, 0.911);
-    z-index: 2;
-    text-align: center;
-}
-
-.pricing-info h2 p {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: rgb(250, 7, 250);
-}
-
-.pricing-info form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.pricing-info input[type="text"],
-.pricing-info input[type="email"] {
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    border-color: rgb(155, 74, 155);
-    background-color: rgb(33, 26, 33);
-}
-
-.pricing-info button {
-    background-color: rgb(7, 6, 6);
-    color: rgb(253, 8, 253);
-    padding: 10px 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.pricing-info button:hover {
-    background-color: rgb(0, 217, 255);
-}
-
-
-/* sevices */
-.services-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 4em;
-    top: 30%;
-    margin-bottom: 30px;
-    color: #f30ddc;
-}
-
-.service-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.service-text {
-    flex: 1;
-    padding: 30px;
-}
-
-.service-text h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.service-text p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-}
-
-.service-image {
-    flex: 1;
-    padding: 10px;
-}
-
-.service-image img {
-    width: 70%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.5s ease;
-}
-
-/* Large Screens */
-@media screen and (min-width: 992px) {
-    .service-item:nth-child(even) .service-image {
-        order: -1;
-    }
-
-    .service-item {
-        justify-content: space-between;
-    }
-}
-
-/* Small Screens */
-@media screen and (max-width: 768px) {
-    .service-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .service-image img {
-        transform: scale(1);
-    }
-
-    .service-image img:hover {
-        transform: scale(1.1); 
-    }
-}
-/* pricing section */
-/* Base Styles */
-.pricing-section {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;  /* Allows wrapping on small screens */
-    gap: 20px;  /* Adds space between items */
-}
-
-.pricing-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;  /* Allows items to grow/shrink equally */
-    min-width: 250px;  /* Minimum width for small screens */
-    transition: transform 0.3s ease;  /* Animation for hover effect */
-}
-
-.pricing-item h4 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.pricing-item p {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #666;
-}
-
-.pricing-item span {
-    font-size: 0.8em;
-    color: #999;
-}
-
-.pricing-item:hover {
-    transform: scale(1.05);  /* Slight zoom effect on hover */
-}
-
-/* Responsive Layouts */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;  /* Center items on small screens */
-    }
-
-    .pricing-item {
-        width: 100%;  /* Make each pricing item take full width */
-        max-width: 400px;  /* Set a max width for better presentation */
-        margin-bottom: 20px;  /* Add space between items */
-    }
-}
-
-@media (min-width: 769px) {
-    .pricing-item {
-        max-width: 30%;  /* Make the items take up roughly 30% of the container width */
-    }
-}
-
-/* pricing info anf the footer  */
-/* Base Styles */
+/* pricing info and the footer  */
 .pricing-info {
     position: relative;
     margin-top: 90px;
@@ -756,7 +551,7 @@ h2 {
         margin: 18px auto;
     }
 }
-
+/* confirmation section  */
 .confirmation-container {
     background: rgba(0, 0, 0, 0.7);
     padding: 30px;
@@ -796,4 +591,31 @@ h2 {
 
 .confirmation-container a:hover {
     background-color: #06a3e0;
+}
+
+/* social links */
+.social-links {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px; 
+    transition: color 0.3s ease; 
+}
+
+.social-links a:hover {
+    color: #00bcd4; 
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 14px; 
+    }
+    
+    .social-links a {
+        font-size: 20px; 
+    }
 }
